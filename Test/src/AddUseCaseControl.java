@@ -28,7 +28,8 @@ class AddUseCaseControl {
             num1 = Integer.parseInt(requestData.getNum1());
             num2 = Integer.parseInt(requestData.getNum2());
         } catch (Exception e) {
-            throw new Exception("Error parsing");
+            throw new Exception("so nhap vao khong hop le");
+            
         }
     
         this.addEntity.setNum1(num1);
