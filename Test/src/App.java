@@ -11,8 +11,8 @@ public class App {
         AbstractCalculateEntity mulEntity = new MulEntity();
         AbstractCalculateEntity divEntity = new DivEntity();
 
-        AddUIConsoleOutput output = new AddUIConsoleOutput();
-        AddUseCaseControl control = new AddUseCaseControl(output,addEntity,subEntity, mulEntity,divEntity);
+        OutputBoundary output = new AddUIConsoleOutput();
+        InputBoundary control = new AddUseCaseControl(output,addEntity,subEntity, mulEntity,divEntity);
         AddUIConsoleInput input = new AddUIConsoleInput(control);
 
         input.input();

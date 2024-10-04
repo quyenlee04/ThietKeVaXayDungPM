@@ -1,14 +1,14 @@
 import Entity.AbstractCalculateEntity;
 
-class AddUseCaseControl {
+class AddUseCaseControl implements InputBoundary{
     private AbstractCalculateEntity addEntity = null;
     private AbstractCalculateEntity subEntity = null;
     private AbstractCalculateEntity mulEntity = null;
     private AbstractCalculateEntity divEntity = null;
-    private AddUIConsoleOutput addOut = null;
+    private OutputBoundary addOut = null;
 
    
-    public AddUseCaseControl(AddUIConsoleOutput addOut, AbstractCalculateEntity addEntity, AbstractCalculateEntity subEntity, AbstractCalculateEntity mulEntity, AbstractCalculateEntity divEntity) {
+    public AddUseCaseControl(OutputBoundary addOut, AbstractCalculateEntity addEntity, AbstractCalculateEntity subEntity, AbstractCalculateEntity mulEntity, AbstractCalculateEntity divEntity) {
         this.addEntity = addEntity;
         this.subEntity = subEntity;
         this.mulEntity = mulEntity;
@@ -16,7 +16,7 @@ class AddUseCaseControl {
         this.addOut = addOut;
     }
 
-  
+  @Override
     public void execute(RequestData requestData) throws Exception {
         int num1 = 0;
         int num2 = 0;
@@ -44,6 +44,7 @@ class AddUseCaseControl {
 
         
         ResponseData responseData = new ResponseData();
+        responseData.setMethod(requestData.getMethod());
         responseData.setAddResult(addResult);
         responseData.setSubResult(subResult);
         responseData.setMulResult(mulResult);

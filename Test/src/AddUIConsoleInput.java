@@ -2,11 +2,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class AddUIConsoleInput {
-    private AddUseCaseControl addControl = null;
+    private InputBoundary addControl = null;
     private BufferedReader input= null;
 
 
-    public AddUIConsoleInput (AddUseCaseControl addControl){
+    public AddUIConsoleInput (InputBoundary addControl){
         this.addControl = addControl;
         input = new BufferedReader(new InputStreamReader(System.in));
     }

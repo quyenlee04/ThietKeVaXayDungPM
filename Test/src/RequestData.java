@@ -1,8 +1,15 @@
 public class RequestData {
     private String num1;
     private String num2;
+    private String method;
 
     
+    public String getMethod() {
+        return method;
+    }
+    public void setMethod(String method) {
+        this.method = method;
+    }
     public String getNum1() {
         return num1;
     }

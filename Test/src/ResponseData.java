@@ -3,6 +3,15 @@ public class ResponseData {
     private String subResult;
     private String mulResult;
     private String divResult;
+    private String method;
+
+    public String getMethod() {
+        return method;
+    }
+
+    public void setMethod(String method) {
+        this.method = method;
+    }
 
     public String getAddResult() {
         return addResult;
